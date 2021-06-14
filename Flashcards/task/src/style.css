@@ -1,0 +1,61 @@
+.header {
+    grid-area: header;
+    text-align: center;
+    color: grey;
+}
+
+body {
+    background-image: url("world.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 360px;
+    margin: auto;
+}
+
+.card {
+    flex: 1 0 25%;
+    background-color: #f9efe5;
+    color: #ff7c02;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    padding-top: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: #ff7c02;
+    padding-top: 10px;
+    top:-10px;
+    border-radius: 5px;
+    color: white;
+
+}
+
+.card:hover .card-container{
+    transform: rotateY(180deg);
+}
